@@ -1,5 +1,10 @@
 *** Settings ***
-Library     SeleniumLibrary
+Documentation       Login
+...                 Para que eu posssa ter acesso a area de anuncios
+...                 Sendo um usuario que possuo um email
+...                 Quero poder iniciar uma sessao
+
+Library             SeleniumLibrary
 
 
 *** Variables ***
