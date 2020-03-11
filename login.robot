@@ -17,37 +17,37 @@ ${alert}                class:alert-dark
 
 *** Test Cases ***
 Login user
-    Acesso website
-    Efetuar login com "telverneck@hotmail.com"
-    exibir area logada
-    fecho navegador
+    Dado que acesso o website
+    Quando submeto com o login "telverneck@hotmail.com"
+    Entao devo ver a area logada
+    E fecho navegador
   
 Login invalid user
-    Acesso website
-    Efetuar login com "telvern"
-    ver mensagem alerta "Oops. Informe um email válido!"
-    fecho navegador
+    Dado que acesso o website
+    Quando submeto com o login "telvern"
+    Entao devo ver a mensagem alerta "Oops. Informe um email válido!"
+    E fecho navegador
 
 Empty login
-    Acesso website
-    Efetuar login com "${Empty}"
-    ver mensagem alerta "Oops. Informe um email válido!"
-    fecho navegador
+    Dado que acesso o website
+    Quando submeto com o login "${Empty}"
+    Entao devo ver a mensagem alerta "Oops. Informe um email válido!"
+    E fecho navegador
 
 *** Keywords ***
-Acesso website
+Dado que acesso o website
     Open browser                    http://bikelov.herokuapp.com        chrome
     Set Selenium implicit wait      5
 
-Efetuar login com "${emailLogin}"
+Quando submeto com o login "${emailLogin}"
     input text                      ${email}                            ${emailLogin}
     click button                    ${buttonEnter}
 
-exibir area logada
+Entao devo ver a area logada
     Page should contain element     ${dashboard}
 
-ver mensagem alerta "${expect_message}"
+Entao devo ver a mensagem alerta "${expect_message}"
     Element Text should be           ${alert}                           ${expect_message}
 
-fecho navegador
+E fecho navegador
     Close browser
