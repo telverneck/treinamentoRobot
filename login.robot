@@ -9,7 +9,7 @@ Library             SeleniumLibrary
 
 *** Variables ***
 ${email}                id:email
-${buttonEnter}          class:btn-red
+${buttonEnter}          xpath://button[contains(text(), "Entrar")]
 ${dashboard}            class:dashboard
 ${alert}                class:alert-dark
 

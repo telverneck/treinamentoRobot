@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 3.1.2 (Python 3.7.4 on win32)" generated="20200310 23:47:24.132" rpa="false">
+<robot generator="Robot 3.1.2 (Python 3.7.4 on win32)" generated="20200311 18:53:32.732" rpa="false">
 <suite id="s1" name="Login" source="E:\qaninja\robot\bikelov\login.robot">
 <test id="s1-t1" name="Login user">
 <kw name="Dado que acesso o website">
@@ -9,17 +9,17 @@
 <arg>http://bikelov.herokuapp.com</arg>
 <arg>chrome</arg>
 </arguments>
-<msg timestamp="20200310 23:47:24.349" level="INFO">Opening browser 'chrome' to base url 'http://bikelov.herokuapp.com'.</msg>
-<status status="PASS" starttime="20200310 23:47:24.349" endtime="20200310 23:47:30.495"></status>
+<msg timestamp="20200311 18:53:33.410" level="INFO">Opening browser 'chrome' to base url 'http://bikelov.herokuapp.com'.</msg>
+<status status="PASS" starttime="20200311 18:53:33.410" endtime="20200311 18:53:43.322"></status>
 </kw>
 <kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
 <doc>Sets the implicit wait value used by Selenium.</doc>
 <arguments>
 <arg>5</arg>
 </arguments>
-<status status="PASS" starttime="20200310 23:47:30.496" endtime="20200310 23:47:30.498"></status>
+<status status="PASS" starttime="20200311 18:53:43.323" endtime="20200311 18:53:43.324"></status>
 </kw>
-<status status="PASS" starttime="20200310 23:47:24.348" endtime="20200310 23:47:30.498"></status>
+<status status="PASS" starttime="20200311 18:53:33.409" endtime="20200311 18:53:43.324"></status>
 </kw>
 <kw name="Quando submeto com o login &quot;telverneck@hotmail.com&quot;">
 <kw name="Input Text" library="SeleniumLibrary">
@@ -28,18 +28,18 @@
 <arg>${email}</arg>
 <arg>${emailLogin}</arg>
 </arguments>
-<msg timestamp="20200310 23:47:30.504" level="INFO">Typing text 'telverneck@hotmail.com' into text field 'id:email'.</msg>
-<status status="PASS" starttime="20200310 23:47:30.503" endtime="20200310 23:47:31.356"></status>
+<msg timestamp="20200311 18:53:43.327" level="INFO">Typing text 'telverneck@hotmail.com' into text field 'id:email'.</msg>
+<status status="PASS" starttime="20200311 18:53:43.327" endtime="20200311 18:53:43.672"></status>
 </kw>
 <kw name="Click Button" library="SeleniumLibrary">
 <doc>Clicks the button identified by ``locator``.</doc>
 <arguments>
 <arg>${buttonEnter}</arg>
 </arguments>
-<msg timestamp="20200310 23:47:31.357" level="INFO">Clicking button 'class:btn-red'.</msg>
-<status status="PASS" starttime="20200310 23:47:31.356" endtime="20200310 23:47:31.479"></status>
+<msg timestamp="20200311 18:53:43.672" level="INFO">Clicking button 'xpath://button[contains(text(), "Entrar")]'.</msg>
+<status status="PASS" starttime="20200311 18:53:43.672" endtime="20200311 18:53:43.746"></status>
 </kw>
-<status status="PASS" starttime="20200310 23:47:30.502" endtime="20200310 23:47:31.480"></status>
+<status status="PASS" starttime="20200311 18:53:43.326" endtime="20200311 18:53:43.746"></status>
 </kw>
 <kw name="Entao devo ver a area logada">
 <kw name="Page Should Contain Element" library="SeleniumLibrary">
@@ -47,19 +47,19 @@
 <arguments>
 <arg>${dashboard}</arg>
 </arguments>
-<msg timestamp="20200310 23:47:32.725" level="INFO">Current page contains element 'class:dashboard'.</msg>
-<status status="PASS" starttime="20200310 23:47:31.482" endtime="20200310 23:47:32.725"></status>
+<msg timestamp="20200311 18:53:44.943" level="INFO">Current page contains element 'class:dashboard'.</msg>
+<status status="PASS" starttime="20200311 18:53:43.746" endtime="20200311 18:53:44.943"></status>
 </kw>
-<status status="PASS" starttime="20200310 23:47:31.481" endtime="20200310 23:47:32.726"></status>
+<status status="PASS" starttime="20200311 18:53:43.746" endtime="20200311 18:53:44.943"></status>
 </kw>
 <kw name="E fecho navegador">
 <kw name="Close Browser" library="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20200310 23:47:32.727" endtime="20200310 23:47:35.163"></status>
+<status status="PASS" starttime="20200311 18:53:44.944" endtime="20200311 18:53:47.307"></status>
 </kw>
-<status status="PASS" starttime="20200310 23:47:32.727" endtime="20200310 23:47:35.163"></status>
+<status status="PASS" starttime="20200311 18:53:44.944" endtime="20200311 18:53:47.307"></status>
 </kw>
-<status status="PASS" starttime="20200310 23:47:24.347" endtime="20200310 23:47:35.164" critical="yes"></status>
+<status status="PASS" starttime="20200311 18:53:33.407" endtime="20200311 18:53:47.308" critical="yes"></status>
 </test>
 <test id="s1-t2" name="Login invalid user">
 <kw name="Dado que acesso o website">
@@ -69,17 +69,17 @@
 <arg>http://bikelov.herokuapp.com</arg>
 <arg>chrome</arg>
 </arguments>
-<msg timestamp="20200310 23:47:35.169" level="INFO">Opening browser 'chrome' to base url 'http://bikelov.herokuapp.com'.</msg>
-<status status="PASS" starttime="20200310 23:47:35.169" endtime="20200310 23:47:40.454"></status>
+<msg timestamp="20200311 18:53:47.313" level="INFO">Opening browser 'chrome' to base url 'http://bikelov.herokuapp.com'.</msg>
+<status status="PASS" starttime="20200311 18:53:47.313" endtime="20200311 18:53:51.732"></status>
 </kw>
 <kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
 <doc>Sets the implicit wait value used by Selenium.</doc>
 <arguments>
 <arg>5</arg>
 </arguments>
-<status status="PASS" starttime="20200310 23:47:40.454" endtime="20200310 23:47:40.458"></status>
+<status status="PASS" starttime="20200311 18:53:51.733" endtime="20200311 18:53:51.735"></status>
 </kw>
-<status status="PASS" starttime="20200310 23:47:35.168" endtime="20200310 23:47:40.458"></status>
+<status status="PASS" starttime="20200311 18:53:47.312" endtime="20200311 18:53:51.735"></status>
 </kw>
 <kw name="Quando submeto com o login &quot;telvern&quot;">
 <kw name="Input Text" library="SeleniumLibrary">
@@ -88,18 +88,18 @@
 <arg>${email}</arg>
 <arg>${emailLogin}</arg>
 </arguments>
-<msg timestamp="20200310 23:47:40.463" level="INFO">Typing text 'telvern' into text field 'id:email'.</msg>
-<status status="PASS" starttime="20200310 23:47:40.462" endtime="20200310 23:47:40.890"></status>
+<msg timestamp="20200311 18:53:51.737" level="INFO">Typing text 'telvern' into text field 'id:email'.</msg>
+<status status="PASS" starttime="20200311 18:53:51.737" endtime="20200311 18:53:51.883"></status>
 </kw>
 <kw name="Click Button" library="SeleniumLibrary">
 <doc>Clicks the button identified by ``locator``.</doc>
 <arguments>
 <arg>${buttonEnter}</arg>
 </arguments>
-<msg timestamp="20200310 23:47:40.890" level="INFO">Clicking button 'class:btn-red'.</msg>
-<status status="PASS" starttime="20200310 23:47:40.890" endtime="20200310 23:47:40.977"></status>
+<msg timestamp="20200311 18:53:51.884" level="INFO">Clicking button 'xpath://button[contains(text(), "Entrar")]'.</msg>
+<status status="PASS" starttime="20200311 18:53:51.884" endtime="20200311 18:53:52.024"></status>
 </kw>
-<status status="PASS" starttime="20200310 23:47:40.462" endtime="20200310 23:47:40.977"></status>
+<status status="PASS" starttime="20200311 18:53:51.736" endtime="20200311 18:53:52.024"></status>
 </kw>
 <kw name="Entao devo ver a mensagem alerta &quot;Oops. Informe um email válido!&quot;">
 <kw name="Element Text Should Be" library="SeleniumLibrary">
@@ -108,19 +108,19 @@
 <arg>${alert}</arg>
 <arg>${expect_message}</arg>
 </arguments>
-<msg timestamp="20200310 23:47:40.978" level="INFO">Verifying element 'class:alert-dark' contains exact text 'Oops. Informe um email válido!'.</msg>
-<status status="PASS" starttime="20200310 23:47:40.978" endtime="20200310 23:47:41.012"></status>
+<msg timestamp="20200311 18:53:52.025" level="INFO">Verifying element 'class:alert-dark' contains exact text 'Oops. Informe um email válido!'.</msg>
+<status status="PASS" starttime="20200311 18:53:52.025" endtime="20200311 18:53:52.054"></status>
 </kw>
-<status status="PASS" starttime="20200310 23:47:40.978" endtime="20200310 23:47:41.012"></status>
+<status status="PASS" starttime="20200311 18:53:52.025" endtime="20200311 18:53:52.054"></status>
 </kw>
 <kw name="E fecho navegador">
 <kw name="Close Browser" library="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20200310 23:47:41.013" endtime="20200310 23:47:43.327"></status>
+<status status="PASS" starttime="20200311 18:53:52.055" endtime="20200311 18:53:54.308"></status>
 </kw>
-<status status="PASS" starttime="20200310 23:47:41.013" endtime="20200310 23:47:43.327"></status>
+<status status="PASS" starttime="20200311 18:53:52.054" endtime="20200311 18:53:54.308"></status>
 </kw>
-<status status="PASS" starttime="20200310 23:47:35.167" endtime="20200310 23:47:43.327" critical="yes"></status>
+<status status="PASS" starttime="20200311 18:53:47.311" endtime="20200311 18:53:54.309" critical="yes"></status>
 </test>
 <test id="s1-t3" name="Empty login">
 <kw name="Dado que acesso o website">
@@ -130,17 +130,17 @@
 <arg>http://bikelov.herokuapp.com</arg>
 <arg>chrome</arg>
 </arguments>
-<msg timestamp="20200310 23:47:43.332" level="INFO">Opening browser 'chrome' to base url 'http://bikelov.herokuapp.com'.</msg>
-<status status="PASS" starttime="20200310 23:47:43.331" endtime="20200310 23:47:49.400"></status>
+<msg timestamp="20200311 18:53:54.312" level="INFO">Opening browser 'chrome' to base url 'http://bikelov.herokuapp.com'.</msg>
+<status status="PASS" starttime="20200311 18:53:54.312" endtime="20200311 18:54:00.939"></status>
 </kw>
 <kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
 <doc>Sets the implicit wait value used by Selenium.</doc>
 <arguments>
 <arg>5</arg>
 </arguments>
-<status status="PASS" starttime="20200310 23:47:49.400" endtime="20200310 23:47:49.406"></status>
+<status status="PASS" starttime="20200311 18:54:00.940" endtime="20200311 18:54:00.942"></status>
 </kw>
-<status status="PASS" starttime="20200310 23:47:43.331" endtime="20200310 23:47:49.407"></status>
+<status status="PASS" starttime="20200311 18:53:54.312" endtime="20200311 18:54:00.942"></status>
 </kw>
 <kw name="Quando submeto com o login &quot;${Empty}&quot;">
 <kw name="Input Text" library="SeleniumLibrary">
@@ -149,18 +149,18 @@
 <arg>${email}</arg>
 <arg>${emailLogin}</arg>
 </arguments>
-<msg timestamp="20200310 23:47:49.410" level="INFO">Typing text '' into text field 'id:email'.</msg>
-<status status="PASS" starttime="20200310 23:47:49.409" endtime="20200310 23:47:49.565"></status>
+<msg timestamp="20200311 18:54:00.944" level="INFO">Typing text '' into text field 'id:email'.</msg>
+<status status="PASS" starttime="20200311 18:54:00.944" endtime="20200311 18:54:01.027"></status>
 </kw>
 <kw name="Click Button" library="SeleniumLibrary">
 <doc>Clicks the button identified by ``locator``.</doc>
 <arguments>
 <arg>${buttonEnter}</arg>
 </arguments>
-<msg timestamp="20200310 23:47:49.565" level="INFO">Clicking button 'class:btn-red'.</msg>
-<status status="PASS" starttime="20200310 23:47:49.565" endtime="20200310 23:47:49.795"></status>
+<msg timestamp="20200311 18:54:01.028" level="INFO">Clicking button 'xpath://button[contains(text(), "Entrar")]'.</msg>
+<status status="PASS" starttime="20200311 18:54:01.027" endtime="20200311 18:54:01.093"></status>
 </kw>
-<status status="PASS" starttime="20200310 23:47:49.408" endtime="20200310 23:47:49.795"></status>
+<status status="PASS" starttime="20200311 18:54:00.943" endtime="20200311 18:54:01.093"></status>
 </kw>
 <kw name="Entao devo ver a mensagem alerta &quot;Oops. Informe um email válido!&quot;">
 <kw name="Element Text Should Be" library="SeleniumLibrary">
@@ -169,25 +169,25 @@
 <arg>${alert}</arg>
 <arg>${expect_message}</arg>
 </arguments>
-<msg timestamp="20200310 23:47:49.796" level="INFO">Verifying element 'class:alert-dark' contains exact text 'Oops. Informe um email válido!'.</msg>
-<status status="PASS" starttime="20200310 23:47:49.796" endtime="20200310 23:47:49.830"></status>
+<msg timestamp="20200311 18:54:01.094" level="INFO">Verifying element 'class:alert-dark' contains exact text 'Oops. Informe um email válido!'.</msg>
+<status status="PASS" starttime="20200311 18:54:01.094" endtime="20200311 18:54:01.122"></status>
 </kw>
-<status status="PASS" starttime="20200310 23:47:49.795" endtime="20200310 23:47:49.830"></status>
+<status status="PASS" starttime="20200311 18:54:01.093" endtime="20200311 18:54:01.122"></status>
 </kw>
 <kw name="E fecho navegador">
 <kw name="Close Browser" library="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20200310 23:47:49.831" endtime="20200310 23:47:52.183"></status>
+<status status="PASS" starttime="20200311 18:54:01.122" endtime="20200311 18:54:03.380"></status>
 </kw>
-<status status="PASS" starttime="20200310 23:47:49.830" endtime="20200310 23:47:52.183"></status>
+<status status="PASS" starttime="20200311 18:54:01.122" endtime="20200311 18:54:03.380"></status>
 </kw>
-<status status="PASS" starttime="20200310 23:47:43.330" endtime="20200310 23:47:52.183" critical="yes"></status>
+<status status="PASS" starttime="20200311 18:53:54.311" endtime="20200311 18:54:03.381" critical="yes"></status>
 </test>
 <doc>Login
 Para que eu posssa ter acesso a area de anuncios
 Sendo um usuario que possuo um email
 Quero poder iniciar uma sessao</doc>
-<status status="PASS" starttime="20200310 23:47:24.134" endtime="20200310 23:47:52.187"></status>
+<status status="PASS" starttime="20200311 18:53:32.734" endtime="20200311 18:54:03.384"></status>
 </suite>
 <statistics>
 <total>
