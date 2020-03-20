@@ -7,8 +7,9 @@ ${emailID}                id:email
 
 *** Keywords ***
 Start Session
-    Open browser                    about:blank        chrome
+    Open browser                    about:blank         chrome
     Set Selenium implicit wait      5
+    Set window size                 1440                900
 
 End Session
     Close browser

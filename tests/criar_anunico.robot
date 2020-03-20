@@ -6,17 +6,18 @@ Documentation       Anuncio
 
 Resource            ../resources/steps_kw.robot
 
-Suite Setup          Logged with "telverneck@hotmail.com"
+Suite Setup          Logged with telverneck@hotmail.com
 Suite Teardown       End Session
 
 Test Teardown       End Test
 
 *** Variables ***
-${bike}=            {"name": "Rocker 26 marchas", "brand": "Shimano", "price":"15" }
+${bike}=            {"thumb": "elleven.jpg","name": "Rocker 26 marchas", "brand": "Shimano", "price":"15" }
 
 *** Test Cases ***
 Anunciar bike
     Dado eu tenho uma ${bike}
     Quando eu faço o anuncio desta bike
-    #Entao devo ver minha bike na lista de anuncios
+    Entao devo ver minha bike na lista de anuncios
+    E o valor da locação deve ser igual a "R$15/dia"
 

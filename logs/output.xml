@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 3.1.2 (Python 3.7.3 on win32)" generated="20200319 15:32:16.317" rpa="false">
-<suite id="s1" name="Criar Anunico" source="D:\qaninja\robot\treinamentoRobot\tests\criar_anunico.robot">
-<kw name="Logged with &quot;telverneck@hotmail.com&quot;" library="base" type="setup">
+<robot generator="Robot 3.1.2 (Python 3.7.3 on win32)" generated="20200320 15:20:16.664" rpa="false">
+<suite id="s1" name="Tests" source="D:\qaninja\robot\treinamentoRobot\tests">
+<suite id="s1-s1" name="Criar Anunico" source="D:\qaninja\robot\treinamentoRobot\tests\criar_anunico.robot">
+<kw name="Logged with telverneck@hotmail.com" library="base" type="setup">
 <kw name="Start Session" library="base">
 <kw name="Open Browser" library="SeleniumLibrary">
 <doc>Opens a new browser instance to the optional ``url``.</doc>
@@ -9,25 +10,33 @@
 <arg>about:blank</arg>
 <arg>chrome</arg>
 </arguments>
-<msg timestamp="20200319 15:32:16.506" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
-<status status="PASS" starttime="20200319 15:32:16.506" endtime="20200319 15:32:18.761"></status>
+<msg timestamp="20200320 15:20:16.948" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20200320 15:20:16.947" endtime="20200320 15:20:18.971"></status>
 </kw>
 <kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
 <doc>Sets the implicit wait value used by Selenium.</doc>
 <arguments>
 <arg>5</arg>
 </arguments>
-<status status="PASS" starttime="20200319 15:32:18.761" endtime="20200319 15:32:18.762"></status>
+<status status="PASS" starttime="20200320 15:20:18.971" endtime="20200320 15:20:18.973"></status>
 </kw>
-<status status="PASS" starttime="20200319 15:32:16.506" endtime="20200319 15:32:18.763"></status>
+<kw name="Set Window Size" library="SeleniumLibrary">
+<doc>Sets current windows size to given ``width`` and ``height``.</doc>
+<arguments>
+<arg>1440</arg>
+<arg>900</arg>
+</arguments>
+<status status="PASS" starttime="20200320 15:20:18.973" endtime="20200320 15:20:20.093"></status>
+</kw>
+<status status="PASS" starttime="20200320 15:20:16.947" endtime="20200320 15:20:20.093"></status>
 </kw>
 <kw name="Go To" library="SeleniumLibrary">
 <doc>Navigates the current browser window to the provided ``url``.</doc>
 <arguments>
 <arg>${url}</arg>
 </arguments>
-<msg timestamp="20200319 15:32:18.763" level="INFO">Opening url 'http://bikelov.herokuapp.com'</msg>
-<status status="PASS" starttime="20200319 15:32:18.763" endtime="20200319 15:32:21.811"></status>
+<msg timestamp="20200320 15:20:20.094" level="INFO">Opening url 'http://bikelov.herokuapp.com'</msg>
+<status status="PASS" starttime="20200320 15:20:20.093" endtime="20200320 15:20:41.197"></status>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
@@ -35,28 +44,28 @@
 <arg>${emailID}</arg>
 <arg>${email}</arg>
 </arguments>
-<msg timestamp="20200319 15:32:21.812" level="INFO">Typing text '"telverneck@hotmail.com"' into text field 'id:email'.</msg>
-<status status="PASS" starttime="20200319 15:32:21.812" endtime="20200319 15:32:21.981"></status>
+<msg timestamp="20200320 15:20:41.197" level="INFO">Typing text 'telverneck@hotmail.com' into text field 'id:email'.</msg>
+<status status="PASS" starttime="20200320 15:20:41.197" endtime="20200320 15:20:41.400"></status>
 </kw>
 <kw name="Click Button" library="SeleniumLibrary">
 <doc>Clicks the button identified by ``locator``.</doc>
 <arguments>
 <arg>${buttonEnter}</arg>
 </arguments>
-<msg timestamp="20200319 15:32:21.981" level="INFO">Clicking button 'xpath://button[contains(text(), "Entrar")]'.</msg>
-<status status="PASS" starttime="20200319 15:32:21.981" endtime="20200319 15:32:22.057"></status>
+<msg timestamp="20200320 15:20:41.400" level="INFO">Clicking button 'xpath://button[contains(text(), "Entrar")]'.</msg>
+<status status="PASS" starttime="20200320 15:20:41.400" endtime="20200320 15:20:41.509"></status>
 </kw>
 <kw name="Page Should Contain Element" library="SeleniumLibrary">
 <doc>Verifies that element ``locator`` is found on the current page.</doc>
 <arguments>
 <arg>${dashboard}</arg>
 </arguments>
-<msg timestamp="20200319 15:32:23.416" level="INFO">Current page contains element 'class:dashboard'.</msg>
-<status status="PASS" starttime="20200319 15:32:22.057" endtime="20200319 15:32:23.416"></status>
+<msg timestamp="20200320 15:20:42.651" level="INFO">Current page contains element 'class:dashboard'.</msg>
+<status status="PASS" starttime="20200320 15:20:41.509" endtime="20200320 15:20:42.652"></status>
 </kw>
-<status status="PASS" starttime="20200319 15:32:16.505" endtime="20200319 15:32:23.416"></status>
+<status status="PASS" starttime="20200320 15:20:16.947" endtime="20200320 15:20:42.652"></status>
 </kw>
-<test id="s1-t1" name="Anunciar bike">
+<test id="s1-s1-t1" name="Anunciar bike">
 <kw name="Dado eu tenho uma ${bike}" library="steps_kw">
 <kw name="Evaluate" library="BuiltIn">
 <doc>Evaluates the given expression in Python and returns the results.</doc>
@@ -67,26 +76,32 @@
 <assign>
 <var>${bike_json}</var>
 </assign>
-<msg timestamp="20200319 15:32:23.421" level="INFO">${bike_json} = {'name': 'Rocker 26 marchas', 'brand': 'Shimano', 'price': '15'}</msg>
-<status status="PASS" starttime="20200319 15:32:23.417" endtime="20200319 15:32:23.421"></status>
+<msg timestamp="20200320 15:20:42.658" level="INFO">${bike_json} = {'thumb': 'elleven.jpg', 'name': 'Rocker 26 marchas', 'brand': 'Shimano', 'price': '15'}</msg>
+<status status="PASS" starttime="20200320 15:20:42.655" endtime="20200320 15:20:42.658"></status>
 </kw>
 <kw name="Log" library="BuiltIn">
 <doc>Logs the given message with the given level.</doc>
 <arguments>
 <arg>${bike_json}</arg>
 </arguments>
-<msg timestamp="20200319 15:32:23.422" level="INFO">{'name': 'Rocker 26 marchas', 'brand': 'Shimano', 'price': '15'}</msg>
-<status status="PASS" starttime="20200319 15:32:23.421" endtime="20200319 15:32:23.422"></status>
+<msg timestamp="20200320 15:20:42.658" level="INFO">{'thumb': 'elleven.jpg', 'name': 'Rocker 26 marchas', 'brand': 'Shimano', 'price': '15'}</msg>
+<status status="PASS" starttime="20200320 15:20:42.658" endtime="20200320 15:20:42.658"></status>
 </kw>
 <kw name="Set Test Variable" library="BuiltIn">
 <doc>Makes a variable available everywhere within the scope of the current test.</doc>
 <arguments>
 <arg>${bike_json}</arg>
 </arguments>
-<msg timestamp="20200319 15:32:23.422" level="INFO">${bike_json} = {'name': 'Rocker 26 marchas', 'brand': 'Shimano', 'price': '15'}</msg>
-<status status="PASS" starttime="20200319 15:32:23.422" endtime="20200319 15:32:23.422"></status>
+<msg timestamp="20200320 15:20:42.659" level="INFO">${bike_json} = {'thumb': 'elleven.jpg', 'name': 'Rocker 26 marchas', 'brand': 'Shimano', 'price': '15'}</msg>
+<status status="PASS" starttime="20200320 15:20:42.659" endtime="20200320 15:20:42.659"></status>
 </kw>
-<status status="PASS" starttime="20200319 15:32:23.417" endtime="20200319 15:32:23.422"></status>
+<kw name="Remove Bike" library="mongo">
+<arguments>
+<arg>${bike_json['name']}</arg>
+</arguments>
+<status status="PASS" starttime="20200320 15:20:42.659" endtime="20200320 15:20:44.146"></status>
+</kw>
+<status status="PASS" starttime="20200320 15:20:42.654" endtime="20200320 15:20:44.146"></status>
 </kw>
 <kw name="Quando eu faço o anuncio desta bike" library="steps_kw">
 <kw name="Click Button" library="SeleniumLibrary">
@@ -94,8 +109,17 @@
 <arguments>
 <arg>${buttonAnunciar}</arg>
 </arguments>
-<msg timestamp="20200319 15:32:23.423" level="INFO">Clicking button '//button[contains(text(), "Criar")]'.</msg>
-<status status="PASS" starttime="20200319 15:32:23.423" endtime="20200319 15:32:24.078"></status>
+<msg timestamp="20200320 15:20:44.147" level="INFO">Clicking button '//button[contains(text(), "Criar")]'.</msg>
+<status status="PASS" starttime="20200320 15:20:44.146" endtime="20200320 15:20:44.230"></status>
+</kw>
+<kw name="Choose File" library="SeleniumLibrary">
+<doc>Inputs the ``file_path`` into the file input field ``locator``.</doc>
+<arguments>
+<arg>css:#thumbnail input</arg>
+<arg>D:\\qaninja\\robot\\treinamentoRobot\\resources/images/${bike_json['thumb']}</arg>
+</arguments>
+<msg timestamp="20200320 15:20:44.231" level="INFO">Sending D:\qaninja\robot\treinamentoRobot\resources\images\elleven.jpg to browser.</msg>
+<status status="PASS" starttime="20200320 15:20:44.230" endtime="20200320 15:20:44.281"></status>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
@@ -103,8 +127,8 @@
 <arg>id:name</arg>
 <arg>${bike_json['name']}</arg>
 </arguments>
-<msg timestamp="20200319 15:32:24.079" level="INFO">Typing text 'Rocker 26 marchas' into text field 'id:name'.</msg>
-<status status="PASS" starttime="20200319 15:32:24.079" endtime="20200319 15:32:24.215"></status>
+<msg timestamp="20200320 15:20:44.282" level="INFO">Typing text 'Rocker 26 marchas' into text field 'id:name'.</msg>
+<status status="PASS" starttime="20200320 15:20:44.282" endtime="20200320 15:20:44.437"></status>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
@@ -112,60 +136,380 @@
 <arg>id:brand</arg>
 <arg>${bike_json['brand']}</arg>
 </arguments>
-<msg timestamp="20200319 15:32:24.216" level="INFO">Typing text 'Shimano' into text field 'id:brand'.</msg>
-<status status="PASS" starttime="20200319 15:32:24.215" endtime="20200319 15:32:24.304"></status>
+<msg timestamp="20200320 15:20:44.438" level="INFO">Typing text 'Shimano' into text field 'id:brand'.</msg>
+<status status="PASS" starttime="20200320 15:20:44.438" endtime="20200320 15:20:44.540"></status>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
 <arguments>
-<arg>css:input[placeholder$='dia']</arg>
+<arg>xpath://input[@placeholder = "Valor cobrado por dia"]</arg>
 <arg>${bike_json['price']}</arg>
 </arguments>
-<msg timestamp="20200319 15:32:24.304" level="INFO">Typing text '15' into text field 'css:input[placeholder$='dia']'.</msg>
-<status status="PASS" starttime="20200319 15:32:24.304" endtime="20200319 15:32:24.374"></status>
+<msg timestamp="20200320 15:20:44.542" level="INFO">Typing text '15' into text field 'xpath://input[@placeholder = "Valor cobrado por dia"]'.</msg>
+<status status="PASS" starttime="20200320 15:20:44.542" endtime="20200320 15:20:44.624"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>css:.btn-red</arg>
+</arguments>
+<msg timestamp="20200320 15:20:44.626" level="INFO">Clicking button 'css:.btn-red'.</msg>
+<status status="PASS" starttime="20200320 15:20:44.624" endtime="20200320 15:20:44.692"></status>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
 <arg>3</arg>
 </arguments>
-<msg timestamp="20200319 15:32:27.376" level="INFO">Slept 3 seconds</msg>
-<status status="PASS" starttime="20200319 15:32:24.374" endtime="20200319 15:32:27.376"></status>
+<msg timestamp="20200320 15:20:47.692" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20200320 15:20:44.692" endtime="20200320 15:20:47.692"></status>
 </kw>
-<status status="PASS" starttime="20200319 15:32:23.423" endtime="20200319 15:32:27.376"></status>
+<status status="PASS" starttime="20200320 15:20:44.146" endtime="20200320 15:20:47.693"></status>
+</kw>
+<kw name="Entao devo ver minha bike na lista de anuncios" library="steps_kw">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>css:.bike-list li</arg>
+</arguments>
+<status status="PASS" starttime="20200320 15:20:47.696" endtime="20200320 15:20:47.734"></status>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<arguments>
+<arg>css:.bike-list</arg>
+<arg>${bike_json['name']}</arg>
+</arguments>
+<msg timestamp="20200320 15:20:47.761" level="INFO">Element 'css:.bike-list' contains text 'Rocker 26 marchas'.</msg>
+<status status="PASS" starttime="20200320 15:20:47.734" endtime="20200320 15:20:47.761"></status>
+</kw>
+<status status="PASS" starttime="20200320 15:20:47.694" endtime="20200320 15:20:47.761"></status>
+</kw>
+<kw name="E o valor da locação deve ser igual a &quot;R$15/dia&quot;" library="steps_kw">
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<arguments>
+<arg>css:.bike-list</arg>
+<arg>${expect_price}</arg>
+</arguments>
+<msg timestamp="20200320 15:20:47.781" level="INFO">Element 'css:.bike-list' contains text 'R$15/dia'.</msg>
+<status status="PASS" starttime="20200320 15:20:47.763" endtime="20200320 15:20:47.781"></status>
+</kw>
+<status status="PASS" starttime="20200320 15:20:47.762" endtime="20200320 15:20:47.781"></status>
 </kw>
 <kw name="End Test" library="base" type="teardown">
 <kw name="Capture Page Screenshot" library="SeleniumLibrary">
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<msg timestamp="20200319 15:32:27.725" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-16.png"&gt;&lt;img src="selenium-screenshot-16.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20200319 15:32:27.377" endtime="20200319 15:32:27.726"></status>
+<msg timestamp="20200320 15:20:48.119" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-37.png"&gt;&lt;img src="selenium-screenshot-37.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20200320 15:20:47.784" endtime="20200320 15:20:48.120"></status>
 </kw>
-<status status="PASS" starttime="20200319 15:32:27.377" endtime="20200319 15:32:27.726"></status>
+<status status="PASS" starttime="20200320 15:20:47.783" endtime="20200320 15:20:48.120"></status>
 </kw>
-<status status="PASS" starttime="20200319 15:32:23.416" endtime="20200319 15:32:27.726" critical="yes"></status>
+<status status="PASS" starttime="20200320 15:20:42.652" endtime="20200320 15:20:48.121" critical="yes"></status>
 </test>
 <kw name="End Session" library="base" type="teardown">
 <kw name="Close Browser" library="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20200319 15:32:27.730" endtime="20200319 15:32:29.890"></status>
+<status status="PASS" starttime="20200320 15:20:48.124" endtime="20200320 15:20:50.261"></status>
 </kw>
-<status status="PASS" starttime="20200319 15:32:27.729" endtime="20200319 15:32:29.890"></status>
+<status status="PASS" starttime="20200320 15:20:48.124" endtime="20200320 15:20:50.261"></status>
 </kw>
 <doc>Anuncio
 Para que eu criar novos anuncios para locação
 Sendo um usuario que possuo um cadastro
 Quero poder incluir um anuncio</doc>
-<status status="PASS" starttime="20200319 15:32:16.319" endtime="20200319 15:32:29.890"></status>
+<status status="PASS" starttime="20200320 15:20:16.689" endtime="20200320 15:20:50.261"></status>
+</suite>
+<suite id="s1-s2" name="Login" source="D:\qaninja\robot\treinamentoRobot\tests\login.robot">
+<kw name="Start Session" library="base" type="setup">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>about:blank</arg>
+<arg>chrome</arg>
+</arguments>
+<msg timestamp="20200320 15:20:50.291" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20200320 15:20:50.291" endtime="20200320 15:20:52.604"></status>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<arguments>
+<arg>5</arg>
+</arguments>
+<status status="PASS" starttime="20200320 15:20:52.604" endtime="20200320 15:20:52.606"></status>
+</kw>
+<kw name="Set Window Size" library="SeleniumLibrary">
+<doc>Sets current windows size to given ``width`` and ``height``.</doc>
+<arguments>
+<arg>1440</arg>
+<arg>900</arg>
+</arguments>
+<status status="PASS" starttime="20200320 15:20:52.606" endtime="20200320 15:20:54.063"></status>
+</kw>
+<status status="PASS" starttime="20200320 15:20:50.290" endtime="20200320 15:20:54.063"></status>
+</kw>
+<test id="s1-s2-t1" name="Login user">
+<kw name="Dado que acesso a pagina de login" library="steps_kw">
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>${url}</arg>
+</arguments>
+<msg timestamp="20200320 15:20:54.065" level="INFO">Opening url 'http://bikelov.herokuapp.com'</msg>
+<status status="PASS" starttime="20200320 15:20:54.065" endtime="20200320 15:21:16.332"></status>
+</kw>
+<status status="PASS" starttime="20200320 15:20:54.065" endtime="20200320 15:21:16.333"></status>
+</kw>
+<kw name="Quando submeto com o login &quot;telverneck@hotmail.com&quot;" library="steps_kw">
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${email}</arg>
+<arg>${emailLogin}</arg>
+</arguments>
+<msg timestamp="20200320 15:21:16.338" level="INFO">Typing text 'telverneck@hotmail.com' into text field 'id:email'.</msg>
+<status status="PASS" starttime="20200320 15:21:16.338" endtime="20200320 15:21:16.534"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>${buttonEnter}</arg>
+</arguments>
+<msg timestamp="20200320 15:21:16.535" level="INFO">Clicking button 'xpath://button[contains(text(), "Entrar")]'.</msg>
+<status status="PASS" starttime="20200320 15:21:16.534" endtime="20200320 15:21:16.609"></status>
+</kw>
+<status status="PASS" starttime="20200320 15:21:16.337" endtime="20200320 15:21:16.609"></status>
+</kw>
+<kw name="Entao devo ver a area logada" library="steps_kw">
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${dashboard}</arg>
+</arguments>
+<msg timestamp="20200320 15:21:17.896" level="INFO">Current page contains element 'class:dashboard'.</msg>
+<status status="PASS" starttime="20200320 15:21:16.610" endtime="20200320 15:21:17.896"></status>
+</kw>
+<status status="PASS" starttime="20200320 15:21:16.610" endtime="20200320 15:21:17.896"></status>
+</kw>
+<kw name="End Test" library="base" type="teardown">
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20200320 15:21:18.285" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-38.png"&gt;&lt;img src="selenium-screenshot-38.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20200320 15:21:17.897" endtime="20200320 15:21:18.285"></status>
+</kw>
+<status status="PASS" starttime="20200320 15:21:17.897" endtime="20200320 15:21:18.285"></status>
+</kw>
+<status status="PASS" starttime="20200320 15:20:54.064" endtime="20200320 15:21:18.286" critical="yes"></status>
+</test>
+<test id="s1-s2-t2" name="Login invalid user">
+<kw name="Tentar logar">
+<arguments>
+<arg>telvern</arg>
+<arg>Oops. Informe um email válido!</arg>
+</arguments>
+<kw name="Dado que acesso a pagina de login" library="steps_kw">
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>${url}</arg>
+</arguments>
+<msg timestamp="20200320 15:21:18.290" level="INFO">Opening url 'http://bikelov.herokuapp.com'</msg>
+<status status="PASS" starttime="20200320 15:21:18.289" endtime="20200320 15:21:19.074"></status>
+</kw>
+<status status="PASS" starttime="20200320 15:21:18.289" endtime="20200320 15:21:19.074"></status>
+</kw>
+<kw name="Quando submeto com o login &quot;${emailLogin}&quot;" library="steps_kw">
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${email}</arg>
+<arg>${emailLogin}</arg>
+</arguments>
+<msg timestamp="20200320 15:21:19.075" level="INFO">Typing text 'telvern' into text field 'id:email'.</msg>
+<status status="PASS" starttime="20200320 15:21:19.075" endtime="20200320 15:21:19.202"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>${buttonEnter}</arg>
+</arguments>
+<msg timestamp="20200320 15:21:19.202" level="INFO">Clicking button 'xpath://button[contains(text(), "Entrar")]'.</msg>
+<status status="PASS" starttime="20200320 15:21:19.202" endtime="20200320 15:21:19.297"></status>
+</kw>
+<status status="PASS" starttime="20200320 15:21:19.075" endtime="20200320 15:21:19.298"></status>
+</kw>
+<kw name="Entao devo ver a mensagem alerta &quot;${expect_message}&quot;" library="steps_kw">
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<arguments>
+<arg>${alert}</arg>
+<arg>${expect_message}</arg>
+</arguments>
+<msg timestamp="20200320 15:21:19.303" level="INFO">Verifying element 'class:alert-dark' contains exact text 'Oops. Informe um email válido!'.</msg>
+<status status="PASS" starttime="20200320 15:21:19.302" endtime="20200320 15:21:19.340"></status>
+</kw>
+<status status="PASS" starttime="20200320 15:21:19.300" endtime="20200320 15:21:19.340"></status>
+</kw>
+<status status="PASS" starttime="20200320 15:21:18.289" endtime="20200320 15:21:19.341"></status>
+</kw>
+<kw name="End Test" library="base" type="teardown">
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20200320 15:21:19.962" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-39.png"&gt;&lt;img src="selenium-screenshot-39.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20200320 15:21:19.342" endtime="20200320 15:21:19.962"></status>
+</kw>
+<status status="PASS" starttime="20200320 15:21:19.341" endtime="20200320 15:21:19.962"></status>
+</kw>
+<status status="PASS" starttime="20200320 15:21:18.288" endtime="20200320 15:21:19.963" critical="yes"></status>
+</test>
+<test id="s1-s2-t3" name="Special character email">
+<kw name="Tentar logar">
+<arguments>
+<arg>telverneck#hotmail.com</arg>
+<arg>Oops. Informe um email válido!</arg>
+</arguments>
+<kw name="Dado que acesso a pagina de login" library="steps_kw">
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>${url}</arg>
+</arguments>
+<msg timestamp="20200320 15:21:19.970" level="INFO">Opening url 'http://bikelov.herokuapp.com'</msg>
+<status status="PASS" starttime="20200320 15:21:19.970" endtime="20200320 15:21:20.744"></status>
+</kw>
+<status status="PASS" starttime="20200320 15:21:19.969" endtime="20200320 15:21:20.744"></status>
+</kw>
+<kw name="Quando submeto com o login &quot;${emailLogin}&quot;" library="steps_kw">
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${email}</arg>
+<arg>${emailLogin}</arg>
+</arguments>
+<msg timestamp="20200320 15:21:20.746" level="INFO">Typing text 'telverneck#hotmail.com' into text field 'id:email'.</msg>
+<status status="PASS" starttime="20200320 15:21:20.745" endtime="20200320 15:21:20.933"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>${buttonEnter}</arg>
+</arguments>
+<msg timestamp="20200320 15:21:20.934" level="INFO">Clicking button 'xpath://button[contains(text(), "Entrar")]'.</msg>
+<status status="PASS" starttime="20200320 15:21:20.933" endtime="20200320 15:21:21.005"></status>
+</kw>
+<status status="PASS" starttime="20200320 15:21:20.744" endtime="20200320 15:21:21.005"></status>
+</kw>
+<kw name="Entao devo ver a mensagem alerta &quot;${expect_message}&quot;" library="steps_kw">
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<arguments>
+<arg>${alert}</arg>
+<arg>${expect_message}</arg>
+</arguments>
+<msg timestamp="20200320 15:21:21.006" level="INFO">Verifying element 'class:alert-dark' contains exact text 'Oops. Informe um email válido!'.</msg>
+<status status="PASS" starttime="20200320 15:21:21.006" endtime="20200320 15:21:21.029"></status>
+</kw>
+<status status="PASS" starttime="20200320 15:21:21.005" endtime="20200320 15:21:21.029"></status>
+</kw>
+<status status="PASS" starttime="20200320 15:21:19.969" endtime="20200320 15:21:21.029"></status>
+</kw>
+<kw name="End Test" library="base" type="teardown">
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20200320 15:21:21.391" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-40.png"&gt;&lt;img src="selenium-screenshot-40.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20200320 15:21:21.032" endtime="20200320 15:21:21.391"></status>
+</kw>
+<status status="PASS" starttime="20200320 15:21:21.032" endtime="20200320 15:21:21.391"></status>
+</kw>
+<status status="PASS" starttime="20200320 15:21:19.968" endtime="20200320 15:21:21.392" critical="yes"></status>
+</test>
+<test id="s1-s2-t4" name="Empty login">
+<kw name="Tentar logar">
+<arguments>
+<arg>${Empty}</arg>
+<arg>Oops. Informe um email válido!</arg>
+</arguments>
+<kw name="Dado que acesso a pagina de login" library="steps_kw">
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>${url}</arg>
+</arguments>
+<msg timestamp="20200320 15:21:21.396" level="INFO">Opening url 'http://bikelov.herokuapp.com'</msg>
+<status status="PASS" starttime="20200320 15:21:21.395" endtime="20200320 15:21:22.294"></status>
+</kw>
+<status status="PASS" starttime="20200320 15:21:21.395" endtime="20200320 15:21:22.294"></status>
+</kw>
+<kw name="Quando submeto com o login &quot;${emailLogin}&quot;" library="steps_kw">
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${email}</arg>
+<arg>${emailLogin}</arg>
+</arguments>
+<msg timestamp="20200320 15:21:22.297" level="INFO">Typing text '' into text field 'id:email'.</msg>
+<status status="PASS" starttime="20200320 15:21:22.296" endtime="20200320 15:21:22.376"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>${buttonEnter}</arg>
+</arguments>
+<msg timestamp="20200320 15:21:22.376" level="INFO">Clicking button 'xpath://button[contains(text(), "Entrar")]'.</msg>
+<status status="PASS" starttime="20200320 15:21:22.376" endtime="20200320 15:21:22.442"></status>
+</kw>
+<status status="PASS" starttime="20200320 15:21:22.295" endtime="20200320 15:21:22.442"></status>
+</kw>
+<kw name="Entao devo ver a mensagem alerta &quot;${expect_message}&quot;" library="steps_kw">
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<arguments>
+<arg>${alert}</arg>
+<arg>${expect_message}</arg>
+</arguments>
+<msg timestamp="20200320 15:21:22.442" level="INFO">Verifying element 'class:alert-dark' contains exact text 'Oops. Informe um email válido!'.</msg>
+<status status="PASS" starttime="20200320 15:21:22.442" endtime="20200320 15:21:22.466"></status>
+</kw>
+<status status="PASS" starttime="20200320 15:21:22.442" endtime="20200320 15:21:22.467"></status>
+</kw>
+<status status="PASS" starttime="20200320 15:21:21.395" endtime="20200320 15:21:22.467"></status>
+</kw>
+<kw name="End Test" library="base" type="teardown">
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20200320 15:21:22.938" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-41.png"&gt;&lt;img src="selenium-screenshot-41.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20200320 15:21:22.468" endtime="20200320 15:21:22.938"></status>
+</kw>
+<status status="PASS" starttime="20200320 15:21:22.467" endtime="20200320 15:21:22.938"></status>
+</kw>
+<status status="PASS" starttime="20200320 15:21:21.394" endtime="20200320 15:21:22.939" critical="yes"></status>
+</test>
+<kw name="End Session" library="base" type="teardown">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20200320 15:21:22.942" endtime="20200320 15:21:25.124"></status>
+</kw>
+<status status="PASS" starttime="20200320 15:21:22.942" endtime="20200320 15:21:25.124"></status>
+</kw>
+<doc>Login
+Para que eu posssa ter acesso a area de anuncios
+Sendo um usuario que possuo um email
+Quero poder iniciar uma sessao</doc>
+<status status="PASS" starttime="20200320 15:20:50.276" endtime="20200320 15:21:25.124"></status>
+</suite>
+<status status="PASS" starttime="20200320 15:20:16.669" endtime="20200320 15:21:25.131"></status>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0">Critical Tests</stat>
-<stat pass="1" fail="0">All Tests</stat>
+<stat pass="5" fail="0">Critical Tests</stat>
+<stat pass="5" fail="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" id="s1" name="Criar Anunico">Criar Anunico</stat>
+<stat pass="5" fail="0" id="s1" name="Tests">Tests</stat>
+<stat pass="1" fail="0" id="s1-s1" name="Criar Anunico">Tests.Criar Anunico</stat>
+<stat pass="4" fail="0" id="s1-s2" name="Login">Tests.Login</stat>
 </suite>
 </statistics>
 <errors>
