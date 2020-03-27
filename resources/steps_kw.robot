@@ -7,6 +7,7 @@ ${email}                id:email
 ${buttonEnter}          xpath://button[contains(text(), "Entrar")]
 ${dashboard}            class:dashboard
 ${alert}                class:alert-dark
+${alertError}           class:alert-error
 ${buttonAnunciar}       //button[contains(text(), "Criar")]
 
 *** Keywords ***
@@ -32,7 +33,7 @@ Dado eu tenho uma ${bike_string}
     Remove bike             ${bike_json['name']}
 
 Quando eu faço o anuncio desta bike
-    click button            ${buttonAnunciar}
+    click link              /new
 
     Choose file             css:#thumbnail input                                                ${CURDIR}/images/${bike_json['thumb']}
     Input text              id:name                                                             ${bike_json['name']}
@@ -47,3 +48,6 @@ Entao devo ver minha bike na lista de anuncios
 
 E o valor da locação deve ser igual a "${expect_price}"
     Element should contain      css:.bike-list               ${expect_price}
+
+Entao devo ver uma mensagem de erro "${expect_message}"
+    Element Text should be           ${alertError}                           ${expect_message}
