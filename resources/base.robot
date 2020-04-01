@@ -1,14 +1,12 @@
 *** Settings ***
 Library             SeleniumLibrary
 
-*** Variables ***
-${url}      http://bikelov.herokuapp.com
-${emailID}                id:email 
+Resource            elements.robot
 
 *** Keywords ***
 Start Session
     Open browser                    about:blank         chrome
-    Set Selenium implicit wait      5
+    Set Selenium implicit wait      10
     Set window size                 1440                900
 
 End Session

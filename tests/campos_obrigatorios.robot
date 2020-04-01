@@ -6,29 +6,26 @@ Documentation       Anuncio
 
 Resource            ../resources/steps_kw.robot
 
-Suite Setup          Logged with telverneck@hotmail.com
+Suite Setup          Run Keywords       Logged with telverneck@hotmail.com
+...                  AND                E eu acesso o formulario de cadastro de anuncio
 Suite Teardown       End Session
 
 Test Teardown       End Test
 
 Test Template       Anuncio nao cadastrado
 
-*** Variables ***
-${no_thumb}=            {"thumb": "","name": "Rocker 26 marchas", "brand": "Shimano", "price":"15" }
-${no_name}=            {"thumb": "elleven.jpg","name": "", "brand": "Shimano", "price":"15" }
-${no_brand}=            {"thumb": "elleven.jpg","name": "Rocker 26 marchas", "brand": "", "price":"15" }
 
-*** Test Cases ***      bike            alert
+*** Test Cases ***      bike            error
 #Sem foto no anuncio     ${no_thumb}     Precisamos de uma foto para o seu anúncio!
 Nao informa o nome      ${no_name}      Informe a descrição do anúncio!
-Nao informa a marca     ${no_brand}     Informe a marca da sua buke :)
+Nao informa a marca     ${no_brand}     Informe a marca da sua Bike :)
 
 
 
 *** Keywords ***
 Anuncio nao cadastrado
-    [Arguments]         ${bike}         ${message}
+    [Arguments]         ${bike}         ${error}
     Dado eu tenho uma ${bike}
     Quando eu faço o anuncio desta bike
-    Entao devo ver uma mensagem de erro "${message}"
+    Entao devo ver uma mensagem de erro "${error}"
 

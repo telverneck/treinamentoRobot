@@ -2,13 +2,6 @@
 Resource    base.robot
 Library     ./lib/mongo.py
 
-*** Variables ***
-${email}                id:email
-${buttonEnter}          xpath://button[contains(text(), "Entrar")]
-${dashboard}            class:dashboard
-${alert}                class:alert-dark
-${alertError}           class:alert-error
-${buttonAnunciar}       //button[contains(text(), "Criar")]
 
 *** Keywords ***
 # Login
@@ -32,22 +25,25 @@ Dado eu tenho uma ${bike_string}
     Set test Variable       ${bike_json}
     Remove bike             ${bike_json['name']}
 
-Quando eu faço o anuncio desta bike
-    click link              /new
+E eu acesso o formulario de cadastro de anuncio
+    Click link              /new
 
-    Choose file             css:#thumbnail input                                                ${CURDIR}/images/${bike_json['thumb']}
-    Input text              id:name                                                             ${bike_json['name']}
-    Input text              id:brand                                                            ${bike_json['brand']}
-    Input text              xpath://input[@placeholder = "Valor cobrado por dia"]               ${bike_json['price']}
-    click button            css:.btn-red
+Quando eu faço o anuncio desta bike
+    Choose file             ${thumbnailInput}           ${CURDIR}/images/${bike_json['thumb']}
+    Clear Element Text      ${bikeName}
+    Input text              ${bikeName}                 ${bike_json['name']}
+    Clear Element Text      ${bikeBrand}
+    Input text              ${bikeBrand}               ${bike_json['brand']}
+    Input text              ${bikePrice}                ${bike_json['price']}
+    click button            ${bikeRegister}
     sleep                   3
 
 Entao devo ver minha bike na lista de anuncios
-    Wait until element is visible       css:.bike-list li              
-    Element should contain              css:.bike-list               ${bike_json['name']}
+    Wait until element is visible       ${bikeList}              
+    Element should contain              ${bikeItem}               ${bike_json['name']}
 
 E o valor da locação deve ser igual a "${expect_price}"
-    Element should contain      css:.bike-list               ${expect_price}
+    Element should contain      ${bikeItem}               ${expect_price}
 
 Entao devo ver uma mensagem de erro "${expect_message}"
     Element Text should be           ${alertError}                           ${expect_message}
