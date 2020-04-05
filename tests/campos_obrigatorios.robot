@@ -16,7 +16,7 @@ Test Template       Anuncio nao cadastrado
 
 
 *** Test Cases ***      bike            error
-#Sem foto no anuncio     ${no_thumb}     Precisamos de uma foto para o seu anúncio!
+Sem foto no anuncio     ${no_thumb}     Precisamos de uma foto para o seu anúncio!
 Nao informa o nome      ${no_name}      Informe a descrição do anúncio!
 Nao informa a marca     ${no_brand}     Informe a marca da sua Bike :)
 

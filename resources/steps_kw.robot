@@ -29,7 +29,9 @@ E eu acesso o formulario de cadastro de anuncio
     Click link              /new
 
 Quando eu faço o anuncio desta bike
-    Choose file             ${thumbnailInput}           ${CURDIR}/images/${bike_json['thumb']}
+    Run keyword if          '${bike_json['thumb']}'
+    ...                     Choose file             ${thumbnailInput}           ${CURDIR}/images/${bike_json['thumb']}
+    
     Clear Element Text      ${bikeName}
     Input text              ${bikeName}                 ${bike_json['name']}
     Clear Element Text      ${bikeBrand}
